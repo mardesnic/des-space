@@ -41,7 +41,7 @@ export const CustomDrawer: React.FC<{ open: boolean; onClose: () => void }> = ({
           <ListItem>
             <ListItemText primary={NAME} secondary={EMAIL} />
           </ListItem>
-          <Box my={2}>
+          <Box component='div' my={2}>
             <Divider />
           </Box>
           <ListItem>
