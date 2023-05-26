@@ -19,7 +19,6 @@ import { Texture, TextureLoader } from 'three';
 import { SPACE_OBJECTS } from '../../const';
 import { SpaceObject } from './SpaceObject';
 import { Bloom, EffectComposer } from '@react-three/postprocessing';
-import { DeathStar } from './DeathStar';
 import { SelectToZoom } from './SelectToZoom';
 
 export const Scene: React.FC = () => {
@@ -98,7 +97,6 @@ export const Scene: React.FC = () => {
             data={spaceObject}
           />
         ))}
-        <DeathStar />
       </SelectToZoom>
     </Bounds>
   );
