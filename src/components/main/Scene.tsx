@@ -20,6 +20,7 @@ import { SPACE_OBJECTS } from '../../const';
 import { SpaceObject } from './SpaceObject';
 import { Bloom, EffectComposer } from '@react-three/postprocessing';
 import { SelectToZoom } from './SelectToZoom';
+import { DeathStar } from './DeathStar';
 
 export const Scene: React.FC = () => {
   const [
@@ -74,7 +75,7 @@ export const Scene: React.FC = () => {
   };
   return (
     <Bounds clip observe>
-      <PerspectiveCamera makeDefault position={[0, 0, 500]} near={0.1} />
+      <PerspectiveCamera makeDefault position={[0, 0, 800]} near={0.1} />
       <ambientLight intensity={0.2} />
       <EffectComposer>
         <Bloom luminanceThreshold={0.5} luminanceSmoothing={0.9} height={300} />
@@ -97,6 +98,7 @@ export const Scene: React.FC = () => {
             data={spaceObject}
           />
         ))}
+        <DeathStar />
       </SelectToZoom>
     </Bounds>
   );
